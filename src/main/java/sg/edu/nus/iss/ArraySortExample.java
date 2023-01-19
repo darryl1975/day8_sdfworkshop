@@ -23,4 +23,21 @@ public class ArraySortExample {
         // print out the sorted array
         System.out.println("Sorted arr (reverse): " + Arrays.toString(name));
     }
+
+    public void example2() {
+        Integer numbers[] = {10, 5, 1, 2, 4, 3,6, 7, 9, 8};
+        // int[] numbers = {10, 5, 1, 2, 4, 3,6, 7, 9, 8};
+
+        // sort number array in ascending order
+        Arrays.sort(numbers);
+
+        // print out the sorted number array
+        System.out.println("Sorted numbers: " + Arrays.toString(numbers));
+
+        // sort number array in reverse order
+        Arrays.sort(numbers, Collections.reverseOrder());
+
+        // print out the sorted number array
+        System.out.println("Sorted numbers: " + Arrays.toString(numbers));
+    }
 }
