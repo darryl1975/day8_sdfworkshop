@@ -14,13 +14,16 @@ public final class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        CollectionSortExample cse = new CollectionSortExample();
-        cse.example02();
+        // CollectionSortExample cse = new CollectionSortExample();
+        // cse.example02();
 
         // ConcurrentHashMapExample chme = new ConcurrentHashMapExample();
         // chme.example();
 
-        LinkedListExample lle = new LinkedListExample();
-        lle.example();
+        // LinkedListExample lle = new LinkedListExample();
+        // lle.example();
+
+        StackExample se = new StackExample();
+        se.example();
     }
 }
