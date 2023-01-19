@@ -19,5 +19,8 @@ public final class App {
 
         ConcurrentHashMapExample chme = new ConcurrentHashMapExample();
         chme.example();
+
+        LinkedListExample lle = new LinkedListExample();
+        lle.example();
     }
 }
