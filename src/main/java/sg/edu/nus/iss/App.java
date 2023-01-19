@@ -2,8 +2,8 @@ package sg.edu.nus.iss;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Hello world!
@@ -35,21 +35,21 @@ public final class App {
         // create a file in the directory created above
         File newFile = new File(dirPath + File.separator + fileName);
         boolean isFileCreated = newFile.createNewFile();
-        
+
         if (isFileCreated)
             System.out.println("New file " + fileName + " created");
-        else    
+        else
             System.out.println("File " + fileName + " already exists");
 
         // list files under a directory
         File fileList[] = newDir.listFiles();
-        for(File f : fileList) {
-            System.out.println("File " + f.getPath() + ":" +f.getCanonicalFile());
+        for (File f : fileList) {
+            System.out.println("File " + f.getPath() + ":" + f.getCanonicalFile());
         }
 
         // Use FileOutputStream to write some integers to file 'data.txt'
         FileOutputStream fos = new FileOutputStream(newFile, true);
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             char str[] = Integer.toString(i).toCharArray();
             fos.write(str[0]);
             fos.write('\n');
@@ -69,5 +69,19 @@ public final class App {
         fos.flush();
         fos.close();
 
+        String fileEmployee = "employee.txt";
+
+        // create a file in the directory created above
+        File newEmployeeFile = new File(dirPath + File.separator + fileEmployee);
+        boolean isEmployeeFileCreated = newEmployeeFile.createNewFile();
+
+        if (isEmployeeFileCreated)
+            System.out.println("New Employee file " + fileName + " created");
+        else
+            System.out.println("File " + fileName + " already exists");
+
+        CSVWriter cw = new CSVWriter();
+        List<Employee> employeeList = cw.generateEmployees();
+        cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
     }
 }

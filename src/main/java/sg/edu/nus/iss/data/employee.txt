@@ -1,0 +1,4 @@
+staffNo,fullName,department,role,emailAddress,salary
+12345,Darryl Ng,SS,Lecturer,darrylng@nus.edu.sg,20000
+23456,Dennis Ng,SS,Lecturer,dennisng@nus.edu.sg,15000
+54354,Dendon Ng,SS,Lecturer,dendonng@nus.edu.sg,25000
