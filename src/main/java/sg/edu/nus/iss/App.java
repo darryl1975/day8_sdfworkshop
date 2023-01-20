@@ -83,5 +83,9 @@ public final class App {
         CSVWriter cw = new CSVWriter();
         List<Employee> employeeList = cw.generateEmployees();
         cw.writeToCSV(employeeList, dirPath + File.separator + fileEmployee);
+
+        CSVReader cr = new CSVReader();
+        List<Employee> readEmployeeList = cr.readCSV(dirPath + File.separator + fileEmployee);
+        readEmployeeList.forEach(e -> System.out.println(e));
     }
 }
